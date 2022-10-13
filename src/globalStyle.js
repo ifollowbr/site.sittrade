@@ -5,8 +5,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-size: 22px;
-        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
         color: #ffffff;
         scroll-behavior: smooth;
     }
