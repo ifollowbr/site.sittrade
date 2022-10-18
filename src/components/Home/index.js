@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { HomeContainer, HomeTopoContainer, OqueFazemosContainer, QuemSomosContainer } from './styles';
+import { CasesContainer, ClientesContainer, HomeContainer, HomeTopoContainer, OqueFazemosContainer, QuemSomosContainer } from './styles';
 import TrioCirculoFundoPreto from '../../assets/trio-circulo-fundopreto.svg';
 import TrioCirculoFundoBranco from '../../assets/trio-circulo-fundobranco.svg';
 import SetaBaixo from '../../assets/seta-baixo.svg';
@@ -14,6 +14,16 @@ import IconeLogistica from '../../assets/icone-logistica.svg';
 import IconeGestaoAcompanhamento from '../../assets/icone-gestão-acompanhamento.svg';
 import Mapa from '../../assets/mapa.svg';
 import { Link } from 'react-router-dom';
+import Beats from '../../assets/beats.png';
+import Beats1 from '../../assets/beats-1.png';
+import CinturaoBud from '../../assets/cinturao-bud.png';
+import Colorado from '../../assets/colorado.png';
+import Guarana from '../../assets/guarana.png';
+import Guarana1 from '../../assets/guarana-1.png';
+import Hoegaarden from '../../assets/hoegaarden.png';
+import Pepsi from '../../assets/pepsi.png';
+import Redbull from '../../assets/redbull.png';
+import Vivant from '../../assets/vivant.png';
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -36,9 +46,30 @@ const Home = () => {
         };
 
         const imgs = [
+            'https://istockblobs.blob.core.windows.net/sitesittrade/fundo-inicio.webp',
             TrioCirculoFundoPreto,
+            TrioCirculoFundoBranco,
             SetaBaixo,
-            'https://istockblobs.blob.core.windows.net/sitesittrade/fundo-inicio.png',
+            imagem1,
+            imagem2,
+            imagem3,
+            imagem4,
+            imagem5,
+            IconeCriacaoPlanejamento,
+            IconeProducao,
+            IconeLogistica,
+            IconeGestaoAcompanhamento,
+            Mapa,
+            Beats,
+            Beats1,
+            CinturaoBud,
+            Colorado,
+            Guarana,
+            Guarana1,
+            Hoegaarden,
+            Pepsi,
+            Redbull,
+            Vivant,
         ];
 
         cacheImages(imgs);
@@ -171,6 +202,59 @@ const Home = () => {
                     </section>
                 </div>
             </OqueFazemosContainer>
+            <CasesContainer>
+                <h1>Cases</h1>  
+                <p>Nós temos a <strong>solução</strong> para o seu negócio!</p>
+                <div className='images-container'>
+                    <img src={TrioCirculoFundoBranco} alt='circulos'/>
+                    <div>
+                        <figure style={{gridArea: 'guarana'}}>
+                            <img src={Guarana} alt='case guaraná'/>
+                        </figure>
+                        <figure style={{gridArea: 'guarana1'}}>
+                            <img src={Guarana1} alt='case guaraná'/>
+                        </figure>
+                        <figure style={{gridArea: 'hoegaarden'}}>
+                            <img src={Hoegaarden} alt='case hoegaarden'/>
+                        </figure>
+                        <figure style={{gridArea: 'pepsi'}}>
+                            <img src={Pepsi} alt='case pepsi'/>
+                        </figure>
+                        <figure style={{gridArea: 'colorado'}}>
+                            <img src={Colorado} alt='case colorado'/>
+                        </figure>
+                        <figure style={{gridArea: 'vivant'}}>
+                            <img src={Vivant} alt='case vivant'/>
+                        </figure>
+                        <figure style={{gridArea: 'beats1'}}>
+                            <img src={Beats1} alt='case beats'/>
+                        </figure>
+                        <figure style={{gridArea: 'bud'}}>
+                            <img src={CinturaoBud} alt='cinturão budweiser'/>
+                        </figure>
+                        <figure style={{gridArea: 'redbull'}}>
+                            <img src={Redbull} alt='case redbull'/>
+                        </figure>
+                        <figure style={{gridArea: 'beats'}}>
+                            <img src={Beats} alt='case beats'/>
+                        </figure>
+                    </div>
+                </div>
+                <h2>Quer conhecer mais?</h2>
+                <Link>Confira aqui todos os nossos cases!</Link>
+            </CasesContainer>
+            <ClientesContainer>
+                <img src={TrioCirculoFundoPreto} alt='circulos'/>
+                <h1>
+                    Alguns de nossos
+                    <strong>principais clientes</strong>
+                </h1>
+                <div>
+                    <img alt='ambev'/>
+                    <img alt='burgerking'/>
+                    <img alt='redbull'/>
+                </div>
+            </ClientesContainer>
         </HomeContainer>
     );
 };

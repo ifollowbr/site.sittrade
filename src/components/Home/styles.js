@@ -304,5 +304,94 @@ export const OqueFazemosContainer = styled.div`
 `;
 
 export const CasesContainer = styled.div`
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > h1 {
+        text-align: center;
+        font-size: 6em;
+        font-style: italic;
+        font-weight: 300;
+        color: #D51B17;
+    }
 
+    > p {
+        text-align: center;
+        color: #000;
+        font-size: 1.2em;
+
+        margin: 40px 0;
+    }
+
+    > p > strong {
+        color: #000;
+        font-size: 1em;
+    }
+
+    > .images-container {
+        display: flex;
+        column-gap: 5%;
+        margin: 0 10%;
+    }
+
+    > .images-container > div {
+        display: grid;
+        grid-template-areas: 
+        'guarana guarana1 hoegaarden pepsi'
+        'colorado guarana1 vivant beats1'
+        'bud redbull beats beats1';
+        gap: 4px;
+        width: 100%;
+    }
+
+    > .images-container > div > figure > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    > h2 {
+        color: #D7B13B;
+        text-align: center;
+        font-size: 4em;
+        font-style: italic;
+        font-weight: 300;
+        margin: 40px 0 20px;
+    }
+
+    > a,
+    > a:visited,
+    > a:active,
+    > a:link {
+        color: #000;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.2em;
+    }
+`;
+
+export const ClientesContainer = styled.div`
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    column-gap: 10%;
+
+    > img {
+        height: 200px;
+    }
+
+    > h1 {
+        display: flex;
+        flex-direction: column;
+        font-weight: 300;
+        font-size: 3em;
+    }
+
+    > h1 > strong {
+        color: #EFBF2D;
+        font-weight: 300;
+        font-size: 1em;
+    }
 `;

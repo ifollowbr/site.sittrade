@@ -1,13 +1,40 @@
 import { BodyContainer, HeaderContainer, ModalHeaderNavContainer } from './styles';
-import SittradeLogo from '../../assets/logo-sit.svg';
 import { Link, useNavigate } from 'react-router-dom';
+import SittradeLogo from '../../assets/logo-sit.svg';
 import InstagramBranco from '../../assets/instagram-branco.svg';
 import LinkedinBranco from '../../assets/linkedin-branco.svg';
 import Fechar from '../../assets/fechar.svg';
 import TrioCirculoFundoPreto from '../../assets/trio-circulo-fundopreto.svg';
+import { useEffect } from 'react';
 
 const ModalHeaderNav = ({setCloseModal}) => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const cacheImages = async (srcArray) => {
+            const promises = await srcArray.map((src) => {
+                return new Promise(function (resolve, reject) {
+                    const img = new Image();
+        
+                    img.src = src;
+                    img.onload = resolve();
+                    img.onerror = reject();
+                });
+            });
+        
+            await Promise.all(promises);
+        };
+
+        const imgs = [
+            SittradeLogo,
+            InstagramBranco,
+            LinkedinBranco,
+            Fechar,
+            TrioCirculoFundoPreto,
+        ];
+
+        cacheImages(imgs);
+    },[]);
 
     return (
         <ModalHeaderNavContainer>

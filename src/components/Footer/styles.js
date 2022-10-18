@@ -23,16 +23,19 @@ export const FooterContainer = styled.div`
         font-size: 2.5em;
         font-weight: 300;
         width: 350px;
+        font-style: italic;
     }
 
     > .body > .left > h1 > strong {
         color: #D7B13B;
         font-size: 1em;
+        font-weight: 400;
     }
 
     > .body > .left > p {
         font-size: 2em;
         color: #D9000D;
+        font-style: italic;
     }
 
     > .body > .right {
