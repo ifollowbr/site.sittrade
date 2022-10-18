@@ -9,7 +9,7 @@ export const FooterContainer = styled.div`
         align-items: center;
 
         height: 100%;
-        padding: 25px 0;
+        padding: 70px 0;
     }
 
     > .body > .left {
@@ -46,7 +46,7 @@ export const FooterContainer = styled.div`
         color: #D7B13B;
         font-weight: 100;
         font-size: 5em;
-        line-height: 30px;
+        line-height: 26px;
         font-style: italic;
     }
 

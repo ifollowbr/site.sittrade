@@ -1,5 +1,6 @@
 import Footer from '../../components/Footer';
 import Header from "../../components/Header";
+import Home from '../../components/Home';
 import { HomePageContainer } from "./styles";
 
 const HomePage = () => {
@@ -7,7 +8,7 @@ const HomePage = () => {
     return (
         <HomePageContainer>
             <Header />
-            <div>a</div>
+            <Home />
             <Footer />
         </HomePageContainer>
     )

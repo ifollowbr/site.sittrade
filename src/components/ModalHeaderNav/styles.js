@@ -7,6 +7,7 @@ export const ModalHeaderNavContainer = styled.div`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 4;
 
     background-color: #000000;
 `;
@@ -117,7 +118,7 @@ export const BodyContainer = styled.div`
     }
 
     > nav > a:hover {
-        font-weight: 500;
+        font-weight: 400;
         border-right: 6px solid #d51b17;
     }
 `;
