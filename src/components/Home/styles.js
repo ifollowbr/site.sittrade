@@ -172,6 +172,137 @@ export const QuemSomosContainer = styled.div`
     }
 `;
 
-export const OqueFazemosContainer = styled.div``;
+export const OqueFazemosContainer = styled.div`
+    > .oque-fazemos-container {
+        display: flex;
+        align-items: center;
+        column-gap: 10%;
 
-export const CasesContainer = styled.div``;
+        margin: 50px 10%;
+    }
+
+    > .oque-fazemos-container > img {
+        height: 200px;
+    }
+
+    > .oque-fazemos-container > h2 {
+        display: flex;
+        flex-direction: column;
+
+        font-size: 6em;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 70px;
+        color: #000;
+    }
+
+    > .oque-fazemos-container > h2 > span {
+        color: #D51B17;
+        font-size: 1em;
+    }
+
+    > .oque-fazemos-container > p {
+        color: #000;
+    }
+
+    > .oque-fazemos-container > p > strong {
+        color: #000;
+    }
+
+    > .itens-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10%;
+
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    > .itens-container > .item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    > .itens-container > .item > h3 {
+        font-size: 2em;
+        font-weight: 500;
+        font-style: italic;
+        color: #000;
+    }
+
+    > .itens-container > .item > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+    }
+
+    > .itens-container > .item > div > img {
+        width: 60px;
+    }
+
+    > .itens-container > .item > div > p {
+        color: #000;
+    }
+
+    > .itens-container > .item > div > p > a,
+    > .itens-container > .item > div > p > a:link,
+    > .itens-container > .item > div > p > a:active,
+    > .itens-container > .item > div > p > a:visited {
+        color: #D7B13B;
+    }
+
+    > .map-container {
+      background-color: #000;  
+
+      position: relative;
+      z-index: -1;
+      height: 400px;
+      margin-top: 150px;
+    }
+
+    > .map-container > figure {
+        height: 120%;
+        position: absolute;
+        top: -10%;
+        left: 10%;
+    }
+
+    > .map-container > figure > img {
+        height: 100%;
+    }
+
+    > .map-container > section {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 10%;
+
+        width: 40%;
+        height: min-content;
+    }
+
+    > .map-container > section > h2 {
+        font-size: 2.5em;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    > .map-container > section > h2 > strong {
+        font-size: 1em;
+        font-weight: 300;
+        color: #D51B17;
+    }
+
+    > .map-container > section > h2 > strong > span{
+        font-size: 1em;
+        font-weight: 300;
+        color: #EFBF2D;
+    }
+`;
+
+export const CasesContainer = styled.div`
+
+`;

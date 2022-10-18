@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { HomeContainer, HomeTopoContainer, QuemSomosContainer } from './styles';
+import { HomeContainer, HomeTopoContainer, OqueFazemosContainer, QuemSomosContainer } from './styles';
 import TrioCirculoFundoPreto from '../../assets/trio-circulo-fundopreto.svg';
 import TrioCirculoFundoBranco from '../../assets/trio-circulo-fundobranco.svg';
 import SetaBaixo from '../../assets/seta-baixo.svg';
@@ -8,6 +8,12 @@ import imagem2 from '../../assets/imagem2.png';
 import imagem3 from '../../assets/imagem3.png';
 import imagem4 from '../../assets/imagem4.png';
 import imagem5 from '../../assets/imagem5.png';
+import IconeCriacaoPlanejamento from '../../assets/icone-criação-planejamento.svg';
+import IconeProducao from '../../assets/icone-produção.svg';
+import IconeLogistica from '../../assets/icone-logistica.svg';
+import IconeGestaoAcompanhamento from '../../assets/icone-gestão-acompanhamento.svg';
+import Mapa from '../../assets/mapa.svg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -95,6 +101,76 @@ const Home = () => {
                     </figure>
                 </div>
             </QuemSomosContainer>
+            <OqueFazemosContainer>
+                <div className='oque-fazemos-container'>
+                    <img src={TrioCirculoFundoBranco} alt='círculos'/>
+                    <h2>
+                        O que
+                        <span>fazemos</span>
+                    </h2>
+                    <p>
+                        O nosso principal objetivo é <strong>agregar valor às marcas</strong> que atendemos, 
+                        com muita competitividade, confiabilidade, transparência e custos adequados.
+                    </p>
+                </div>
+                <div className='itens-container'>
+                    <div className='item'>
+                        <h3>Criação e Planejamento</h3>
+                        <div>
+                            <img src={IconeCriacaoPlanejamento} alt='criação'/>
+                            <p>
+                                Temos uma equipe capacitada para auxiliar nossos clientes no momento de criação e briefing inicial do job. 
+                                Nossa intenção é conseguir contribuir com o projeto desde o primeiro passo.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='item'>
+                        <h3>Produção</h3>
+                        <div>
+                            <img src={IconeProducao} alt='produção'/>
+                            <p>
+                                Nosso know-how permite oferecer ao cliente as opções mais interessantes, 
+                                tanto em termos financeiros, quanto em inovação. 
+                                Acompanhamos a produção do início ao fim.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='item'>
+                        <h3>Logística</h3>
+                        <div>
+                            <img src={IconeLogistica} alt='logística'/>
+                            <p>
+                                Atendemos todo o Brasil com excelência. Trabalhamos com modais rodoviários, 
+                                dedicados e aéreos para garantir que o material seja entregue no prazo necessário.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='item'>
+                        <h3>Gestão e acompanhamento</h3>
+                        <div>
+                            <img src={IconeGestaoAcompanhamento} alt='gestão'/>
+                            <p>
+                                Através da nossa ferramenta de gestão <Link>iFollow</Link>, fechamos nossa cadeia de atendimento 360. 
+                                O cliente possui visibilidade real time de todas as suas entregas e positivações.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className='map-container'>
+                    <figure>
+                        <img src={Mapa} alt='mapa'/>
+                    </figure>
+                    <section>
+                        <h2>
+                            Atendemos todo o Brasil com <strong>agilidade <span>&</span> qualidade</strong>
+                        </h2>
+                        <p>
+                            Além da nossa estrutura própria em São Paulo, possuímos bases e parceiros nas principais capitais do país, 
+                            garantindo uma grande capilaridade de produção e redução nos custos de distribuição de materiais. 
+                        </p>
+                    </section>
+                </div>
+            </OqueFazemosContainer>
         </HomeContainer>
     );
 };
