@@ -2,9 +2,14 @@ import { FooterContainer } from './styles';
 import LogoSittrade from '../../assets/logo-sit.svg';
 import InstagramPreto from '../../assets/instagram.svg';
 import LinkedinPreto from '../../assets/linkedin.svg';
-import { useEffect } from 'react';
+import LinkedinAmarelo from '../../assets/linkedin-amarelo.svg';
+import InstagramAmarelo from '../../assets/instagram-amarelo.svg';
+import { useEffect, useState } from 'react';
 
 const Footer = () => {
+    const [linkedinHover, setLinkedinHover] = useState(false);
+    const [instagramHover, setInstagranHover] = useState(false);
+
     useEffect(() => {
         const cacheImages = async (srcArray) => {
             const promises = await srcArray.map((src) => {
@@ -24,6 +29,8 @@ const Footer = () => {
             LogoSittrade,
             InstagramPreto,
             LinkedinPreto,
+            LinkedinAmarelo,
+            InstagramAmarelo
         ];
 
         cacheImages(imgs);
@@ -41,11 +48,31 @@ const Footer = () => {
                     <h2>Onde estamos</h2>
                     <p>Rua Jandiatuba, 630 – Conj. 430 Vila Andrade – São Paulo/SP</p>
                     <div>
-                        <a target='_blank' rel="noreferrer" href="https://www.instagram.com/sittrademkt/">
-                            <img src={InstagramPreto} alt='instagram' />
+                        <a 
+                            onMouseEnter={() => setInstagranHover(true)} 
+                            onMouseLeave={() => setInstagranHover(false)}
+                            target='_blank' 
+                            rel="noreferrer" 
+                            href="https://www.instagram.com/sittrademkt/"
+                        >
+                            {instagramHover ? (
+                                <img src={InstagramAmarelo} alt='instagram' />
+                            ): (
+                                <img src={InstagramPreto} alt='instagram' />
+                            )}
                         </a>
-                        <a target='_blank' rel="noreferrer" href="https://br.linkedin.com/company/sittrade">
-                            <img src={LinkedinPreto} alt='Linkedin' />
+                        <a 
+                            onMouseEnter={() => setLinkedinHover(true)} 
+                            onMouseLeave={() => setLinkedinHover(false)}
+                            target='_blank'
+                            rel="noreferrer"
+                            href="https://br.linkedin.com/company/sittrade"
+                        >
+                            {linkedinHover ? (
+                                <img src={LinkedinAmarelo} alt='Linkedin' />
+                            ): (
+                                <img src={LinkedinPreto} alt='Linkedin' />
+                            )}
                         </a>
                     </div>
                 </div>

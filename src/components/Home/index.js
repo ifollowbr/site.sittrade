@@ -24,9 +24,41 @@ import Hoegaarden from '../../assets/hoegaarden.png';
 import Pepsi from '../../assets/pepsi.png';
 import Redbull from '../../assets/redbull.png';
 import Vivant from '../../assets/vivant.png';
+import LogoAmbev from '../../assets/logo-ambev.webp';
+import LogoRedbull from '../../assets/logo-redbull.webp';
+import LogoBurgerKing from '../../assets/logo-burgerking.webp';
+import LogoaAjinomoto from '../../assets/logo-ajinomoto.webp';
+import LogoBaxter from '../../assets/logo-baxter.webp';
+import LogoMagalu from '../../assets/logo-magalu.webp';
+import LogoMakro from '../../assets/logo-makro.webp';
+import LogoMarfrig from '../../assets/logo-marfrig.webp';
+import LogoMonster from '../../assets/logo-monster.webp';
+import LogoMovida from '../../assets/logo-movida.webp';
+import LogoPepsico from '../../assets/logo-pepsico.webp';
+import LogoSwift from '../../assets/logo-swift.webp';
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
+    const [imagesPosition, setImagesPosition] = useState('-20px');
+    const [timeOutId, setTimeOutId] = useState('');
+
+    useEffect(() => {
+        const imagesTimeOut = setTimeout(() => {
+                switch (imagesPosition) {
+                    case '-20px':
+                        return setImagesPosition('-500px');
+                    case '-500px':
+                        return setImagesPosition('-980px');
+                    case '-980px':
+                        return setImagesPosition('-1460px');
+                    case '-1460px':
+                        return setImagesPosition('-20px');
+                    default:
+                        return
+                }
+        }, 3500);
+        setTimeOutId(imagesTimeOut);
+    },[imagesPosition]);
 
     useEffect(() => {
         const cacheImages = async (srcArray) => {
@@ -70,9 +102,22 @@ const Home = () => {
             Pepsi,
             Redbull,
             Vivant,
+            LogoAmbev,
+            LogoRedbull,
+            LogoBurgerKing,
+            LogoaAjinomoto,
+            LogoBaxter,
+            LogoMagalu,
+            LogoMakro,
+            LogoMarfrig,
+            LogoMonster,
+            LogoMovida,
+            LogoPepsico,
+            LogoSwift,
         ];
 
         cacheImages(imgs);
+        //eslint-disable-next-line
     },[]);
 
     return (
@@ -81,7 +126,7 @@ const Home = () => {
             <HomeTopoContainer>
                 <div className='body'>
                     <figure>
-                        <img src={TrioCirculoFundoPreto} alt='circulos'/>
+                        <img src={TrioCirculoFundoPreto} alt='círculos'/>
                     </figure>
                     <div>
                         <p>soluções</p>
@@ -90,7 +135,7 @@ const Home = () => {
                         <p>MKT</p>
                     </div>
                     <figure>
-                        <img src={TrioCirculoFundoPreto} alt='circulos'/>
+                        <img src={TrioCirculoFundoPreto} alt='círculos'/>
                     </figure>
                 </div>
                 <div className='saiba-mais-container'>
@@ -206,7 +251,7 @@ const Home = () => {
                 <h1>Cases</h1>  
                 <p>Nós temos a <strong>solução</strong> para o seu negócio!</p>
                 <div className='images-container'>
-                    <img src={TrioCirculoFundoBranco} alt='circulos'/>
+                    <img src={TrioCirculoFundoBranco} alt='círculos'/>
                     <div>
                         <figure style={{gridArea: 'guarana'}}>
                             <img src={Guarana} alt='case guaraná'/>
@@ -241,18 +286,89 @@ const Home = () => {
                     </div>
                 </div>
                 <h2>Quer conhecer mais?</h2>
-                <Link>Confira aqui todos os nossos cases!</Link>
+                <Link to='/cases'>Confira aqui todos os nossos cases!</Link>
             </CasesContainer>
             <ClientesContainer>
-                <img src={TrioCirculoFundoPreto} alt='circulos'/>
+                <img src={TrioCirculoFundoPreto} alt='círculos'/>
                 <h1>
                     Alguns de nossos
                     <strong>principais clientes</strong>
                 </h1>
-                <div>
-                    <img alt='ambev'/>
-                    <img alt='burgerking'/>
-                    <img alt='redbull'/>
+                <div className='carousel'>
+                    <div className='logos-container'>
+                        <div className='images-container' style={{left: imagesPosition}}>
+                            <figure>
+                                <img src={LogoAmbev} alt='ambev'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoBurgerKing} alt='burgerking'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoRedbull} alt='redbull'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoSwift} alt='swift'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoBaxter} alt='baxter'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoMagalu} alt='magalu'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoMakro} alt='makro'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoMarfrig} alt='marfrig'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoMonster} alt='monster'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoMovida} alt='movida'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoPepsico} alt='pepsico'/>
+                            </figure>
+                            <figure>
+                                <img src={LogoaAjinomoto} alt='ajinomoto'/>
+                            </figure>
+                        </div>
+                    </div>
+                    <div className='buttons-container'>
+                        <button 
+                            style={{backgroundColor: imagesPosition === '-20px' ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
+                            disabled={imagesPosition === '-20px'}
+                            onClick={() => {
+                                clearTimeout(timeOutId);
+                                setImagesPosition('-20px');
+                            }}
+                        ></button>
+                        <button 
+                            style={{backgroundColor: imagesPosition === '-500px' ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
+                            disabled={imagesPosition === '-500px'}
+                            onClick={() => {
+                                clearTimeout(timeOutId);
+                                setImagesPosition('-500px');
+                            }}
+                        ></button>
+                        <button 
+                            style={{backgroundColor: imagesPosition === '-980px' ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
+                            disabled={imagesPosition === '-980px'}
+                            onClick={() => {
+                                clearTimeout(timeOutId);
+                                setImagesPosition('-980px');
+                            }}
+                        ></button>
+                        <button 
+                            style={{backgroundColor: imagesPosition === '-1460px' ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
+                            disabled={imagesPosition === '-1460px'}
+                            onClick={() => {
+                                clearTimeout(timeOutId);
+                                setImagesPosition('-1460px');
+                            }}
+                        ></button>
+                    </div>
                 </div>
             </ClientesContainer>
         </HomeContainer>

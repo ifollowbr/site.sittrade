@@ -60,7 +60,7 @@ const ModalHeaderNav = ({setCloseModal}) => {
                     </div>
                 </div>
                 <figure className='circulos'>
-                    <img src={TrioCirculoFundoPreto} alt='circulos'/>
+                    <img src={TrioCirculoFundoPreto} alt='círculos'/>
                 </figure>
                 <nav>
                     <Link to='/'>Home</Link>

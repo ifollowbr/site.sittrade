@@ -176,6 +176,7 @@ export const OqueFazemosContainer = styled.div`
     > .oque-fazemos-container {
         display: flex;
         align-items: center;
+        justify-content: center;
         column-gap: 10%;
 
         margin: 50px 10%;
@@ -203,6 +204,7 @@ export const OqueFazemosContainer = styled.div`
 
     > .oque-fazemos-container > p {
         color: #000;
+        max-width: 500px;
     }
 
     > .oque-fazemos-container > p > strong {
@@ -393,5 +395,60 @@ export const ClientesContainer = styled.div`
         color: #EFBF2D;
         font-weight: 300;
         font-size: 1em;
+    }
+
+    > .carousel {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 440px;
+        height: 200px;
+    }
+
+    > .carousel > .logos-container {
+        position: relative;
+        overflow: hidden;
+        width: 440px;
+        height: 150px;
+    }
+
+    > .carousel > .logos-container > .images-container {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: left 0.5s linear;
+    }
+
+    > .carousel > .logos-container > .images-container > figure {
+        width: 120px;
+        height: 100%;
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    > .carousel > .logos-container > .images-container > figure > img {
+        width: 100%;
+    }
+
+    > .carousel > .buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 4px;
+
+        width: 100%;
+    }
+
+    > .carousel > .buttons-container > button {
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+    }
+
+    > .carousel > .buttons-container > button:disabled {
+        border: none;
     }
 `;
