@@ -63,10 +63,10 @@ const ModalHeaderNav = ({setCloseModal}) => {
                     <img src={TrioCirculoFundoPreto} alt='círculos'/>
                 </figure>
                 <nav>
-                    <Link to='/'>Home</Link>
-                    <Link to='/quem-somos'>Quem Somos</Link>
-                    <Link to='/oque-fazemos'>O que fazemos</Link>
-                    <Link to='cases'>Cases</Link>
+                    <Link to='/' onClick={() => setCloseModal(false)}>Home</Link>
+                    <a href='/#quem-somos' onClick={() => setCloseModal(false)}>Quem Somos</a>
+                    <a href='/#oque-fazemos' onClick={() => setCloseModal(false)}>O que fazemos</a>
+                    <Link to='cases' onClick={() => setCloseModal(false)}>Cases</Link>
                 </nav>
             </BodyContainer>
         </ModalHeaderNavContainer>

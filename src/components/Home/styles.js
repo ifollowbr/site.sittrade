@@ -89,6 +89,7 @@ export const HomeTopoContainer = styled.div`
         row-gap: 15px;
 
         font-style: italic;
+        text-decoration: none;
         cursor: pointer;
     }
 
@@ -379,6 +380,8 @@ export const ClientesContainer = styled.div`
     justify-content: center;
     padding: 60px 0;
     column-gap: 10%;
+    position: relative;
+    z-index: -1;
 
     > img {
         height: 200px;

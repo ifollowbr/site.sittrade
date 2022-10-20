@@ -138,14 +138,14 @@ const Home = () => {
                         <img src={TrioCirculoFundoPreto} alt='círculos'/>
                     </figure>
                 </div>
-                <div className='saiba-mais-container'>
+                <a className='saiba-mais-container' href='/#quem-somos'>
                     <p>Conheça a <strong>melhor solução</strong> para o seu negócio</p>
                     <figure>
                         <img src={SetaBaixo} alt='seta'/>
                     </figure>
-                </div>
+                </a>
             </HomeTopoContainer>
-            <QuemSomosContainer>
+            <QuemSomosContainer id='quem-somos'>
                 <div className='description-container'>
                     <img src={TrioCirculoFundoBranco} alt='círculos'/>
                     <h2>
@@ -177,7 +177,7 @@ const Home = () => {
                     </figure>
                 </div>
             </QuemSomosContainer>
-            <OqueFazemosContainer>
+            <OqueFazemosContainer id='oque-fazemos'>
                 <div className='oque-fazemos-container'>
                     <img src={TrioCirculoFundoBranco} alt='círculos'/>
                     <h2>
