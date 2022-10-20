@@ -39,26 +39,26 @@ import LogoSwift from '../../assets/logo-swift.webp';
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const [imagesPosition, setImagesPosition] = useState('-20px');
-    const [timeOutId, setTimeOutId] = useState('');
+    const [carouselPage, setCarouselPage] = useState(1);
+    // const [timeOutId, setTimeOutId] = useState('');
 
     useEffect(() => {
-        const imagesTimeOut = setTimeout(() => {
-                switch (imagesPosition) {
-                    case '-20px':
-                        return setImagesPosition('-500px');
-                    case '-500px':
-                        return setImagesPosition('-980px');
-                    case '-980px':
-                        return setImagesPosition('-1460px');
-                    case '-1460px':
-                        return setImagesPosition('-20px');
+        setTimeout(() => {
+                switch (carouselPage) {
+                    case 1:
+                        return setCarouselPage(2);
+                    case 2:
+                        return setCarouselPage(3);
+                    case 3:
+                        return setCarouselPage(4);
+                    case 4:
+                        return setCarouselPage(1);
                     default:
                         return
                 }
         }, 3500);
-        setTimeOutId(imagesTimeOut);
-    },[imagesPosition]);
+        // setTimeOutId(imagesTimeOut);
+    },[carouselPage]);
 
     useEffect(() => {
         const cacheImages = async (srcArray) => {
@@ -288,7 +288,7 @@ const Home = () => {
                 <h2>Quer conhecer mais?</h2>
                 <Link to='/cases'>Confira aqui todos os nossos cases!</Link>
             </CasesContainer>
-            <ClientesContainer>
+            <ClientesContainer carouselPage={carouselPage}>
                 <img src={TrioCirculoFundoPreto} alt='círculos'/>
                 <h1>
                     Alguns de nossos
@@ -296,7 +296,7 @@ const Home = () => {
                 </h1>
                 <div className='carousel'>
                     <div className='logos-container'>
-                        <div className='images-container' style={{left: imagesPosition}}>
+                        <div className='images-container' >
                             <figure>
                                 <img src={LogoAmbev} alt='ambev'/>
                             </figure>
@@ -337,36 +337,36 @@ const Home = () => {
                     </div>
                     <div className='buttons-container'>
                         <button 
-                            style={{backgroundColor: imagesPosition === '-20px' ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
-                            disabled={imagesPosition === '-20px'}
-                            onClick={() => {
-                                clearTimeout(timeOutId);
-                                setImagesPosition('-20px');
-                            }}
+                            style={{backgroundColor: carouselPage === 1 ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
+                            // disabled={imagesPosition === '-20px'}
+                            // onClick={() => {
+                            //     clearTimeout(timeOutId);
+                            //     setImagesPosition('-20px');
+                            // }}
                         ></button>
                         <button 
-                            style={{backgroundColor: imagesPosition === '-500px' ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
-                            disabled={imagesPosition === '-500px'}
-                            onClick={() => {
-                                clearTimeout(timeOutId);
-                                setImagesPosition('-500px');
-                            }}
+                            style={{backgroundColor: carouselPage === 2 ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
+                            // disabled={imagesPosition === '-500px'}
+                            // onClick={() => {
+                            //     clearTimeout(timeOutId);
+                            //     setImagesPosition('-500px');
+                            // }}
                         ></button>
                         <button 
-                            style={{backgroundColor: imagesPosition === '-980px' ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
-                            disabled={imagesPosition === '-980px'}
-                            onClick={() => {
-                                clearTimeout(timeOutId);
-                                setImagesPosition('-980px');
-                            }}
+                            style={{backgroundColor: carouselPage === 3 ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
+                            // disabled={imagesPosition === '-980px'}
+                            // onClick={() => {
+                            //     clearTimeout(timeOutId);
+                            //     setImagesPosition('-980px');
+                            // }}
                         ></button>
                         <button 
-                            style={{backgroundColor: imagesPosition === '-1460px' ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
-                            disabled={imagesPosition === '-1460px'}
-                            onClick={() => {
-                                clearTimeout(timeOutId);
-                                setImagesPosition('-1460px');
-                            }}
+                            style={{backgroundColor: carouselPage === 4 ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
+                            // disabled={imagesPosition === '-1460px'}
+                            // onClick={() => {
+                            //     clearTimeout(timeOutId);
+                            //     setImagesPosition('-1460px');
+                            // }}
                         ></button>
                     </div>
                 </div>

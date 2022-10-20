@@ -82,7 +82,6 @@ export const FooterContainer = styled.div`
         cursor: pointer;
     }
 
-
     > .footer {
         display: flex;
         align-items: center;
@@ -98,5 +97,56 @@ export const FooterContainer = styled.div`
 
     > .footer > p {
         margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        > .body {
+            padding: 20px 0;
+        }
+
+        > .body > .left {
+            row-gap: 10px;
+        }
+
+        > .body > .left > h1 {
+            font-size: 1.5em;
+            width: 110px;
+        }
+
+        > .body > .left > p {
+            font-size: 1em;
+        }
+
+        > .body > .right {
+            row-gap: 3px;
+        }
+
+        > .body > .right > h1 {
+            font-size: 2.5em;
+            line-height: 10px;
+        }
+
+        > .body > .right > h2 {
+            line-height: 10px;
+            font-size: 2em;
+        }
+
+        > .body > .right > p {
+            width: 150px;
+            padding: 5px;
+        }
+
+        > .body > .right > div {
+            column-gap: 5px;
+            padding: 5px;
+        }
+
+        > .body > .right > div > a {
+            width: 25px;
+        }
+
+        > .footer {
+            height: 30px;
+        }
     }
 `;

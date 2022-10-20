@@ -104,10 +104,58 @@ export const HomeTopoContainer = styled.div`
     > .saiba-mais-container > figure > img {
         height: 100%;
     }
+
+    @media screen and (max-width: 768px) {
+        > .body > figure {
+            height: 60px;
+        }
+
+        > .body > div > :first-child {
+            font-size: 3em;
+            line-height: 15px;
+        }
+
+        > .body > div > :nth-child(2) {
+            font-size: 3em;
+            line-height: 15px;
+            margin-left: 15px;
+        }
+
+        > .body > div > :nth-child(3) {
+            font-size: 3em;
+            line-height: 20px;
+            margin-left: 5px;
+        }
+
+        > .body > div > :nth-child(3) > strong {
+            font-size: 1em;
+        }
+
+        > .body > div > :last-child {
+            font-size: 3em;
+            margin-left: 40px;
+            line-height: 25px;
+        }
+
+        > .saiba-mais-container {
+            row-gap: 5px;
+        }
+
+        > .saiba-mais-container > p {
+            font-size: 0.6em;
+        }
+
+        > .saiba-mais-container > p > strong {
+            font-size: 1em;
+        }
+
+        > .saiba-mais-container > figure {
+            height: 10px;
+        }
+    }
 `;
 
 export const QuemSomosContainer = styled.div`
-    min-height: 100vh;
 
     > .description-container {
         display: flex;
@@ -142,6 +190,7 @@ export const QuemSomosContainer = styled.div`
     }
 
     > .description-container > p > strong{
+        font-size: 1em;
         color: #000;
     }
 
@@ -170,6 +219,27 @@ export const QuemSomosContainer = styled.div`
 
     > .images-container > figure > img {
         width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        > .description-container {
+            column-gap: 5%;
+            margin: 20px 5% 0;
+        }
+
+        > .description-container > img {
+            height: 60px;
+        }
+
+        > .description-container > h2 {
+            font-size: 3em;
+            line-height: 18px;
+        }
+
+        > p {
+            margin: 10px 0 30px;
+        }
+
     }
 `;
 
@@ -304,6 +374,55 @@ export const OqueFazemosContainer = styled.div`
         font-weight: 300;
         color: #EFBF2D;
     }
+
+    @media screen and (max-width: 768px) {
+        > .oque-fazemos-container {
+            margin: 50px 5%;
+            column-gap: 5%;
+        }
+
+        > .oque-fazemos-container > img {
+            height: 60px;
+        }
+
+        > .oque-fazemos-container > h2 {
+            font-size: 3em;
+            line-height: 18px;
+        }
+
+        > .itens-container {
+            gap: 5%;
+            width: 90%;
+            max-width: 350px;
+        }
+
+        > .itens-container > .item > h3 {
+            font-size: 1em;
+        }
+
+        > .itens-container > .item > div > img {
+            width: 25px;
+        }
+
+        > .itens-container > .item > div > p {
+            font-size: 0.8em;
+        }
+
+        > .map-container {
+            margin-top: 50px;
+            height: 200px;
+        }
+
+        > .map-container > figure {
+            height: 70%;
+            top: 10%;
+            left: 5%;
+        }
+
+        > .map-container > section > h2 {
+            font-size: 1.5em;
+        }
+    }
 `;
 
 export const CasesContainer = styled.div`
@@ -371,6 +490,42 @@ export const CasesContainer = styled.div`
         margin: 0 auto;
         font-size: 1.2em;
     }
+
+    @media screen and (max-width: 768px){
+        padding: 20px 0;
+
+        > h1 {
+            font-size: 3em;    
+        }
+
+        > p {
+            margin: 20px 0;
+        }
+
+        > .images-container {
+            margin: 0 5%;
+        }
+
+        > .images-container > img {
+            height: 60px;
+            margin: auto 0;
+        }
+
+        > .images-container > div {
+            gap: 2px;
+        }
+
+        > h2 {
+            font-size: 2em;
+        }
+
+        > a,
+        > a:visited,
+        > a:active,
+        > a:link {
+            font-size: 1em;
+        }
+    }
 `;
 
 export const ClientesContainer = styled.div`
@@ -411,7 +566,7 @@ export const ClientesContainer = styled.div`
     > .carousel > .logos-container {
         position: relative;
         overflow: hidden;
-        width: 440px;
+        width: 100%;
         height: 150px;
     }
 
@@ -421,11 +576,24 @@ export const ClientesContainer = styled.div`
         justify-content: space-between;
         align-items: center;
         transition: left 0.5s linear;
+        left: ${({carouselPage}) => {
+            switch (carouselPage) {
+                case 1:
+                    return '-20px';
+                case 2:
+                    return '-500px';
+                case 3:
+                    return '-980px';
+                case 4:
+                    return '-1460px';
+                default:
+                    return '-20px';
+            }
+        }}
     }
 
     > .carousel > .logos-container > .images-container > figure {
         width: 120px;
-        height: 100%;
         margin: 0 20px;
         display: flex;
         align-items: center;
@@ -453,5 +621,56 @@ export const ClientesContainer = styled.div`
 
     > .carousel > .buttons-container > button:disabled {
         border: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 30px 0;
+
+        > img {
+            display: none;
+        }
+
+        > h1 {
+            font-size: 2em;
+        }
+
+        > .carousel {
+            width: 240px;
+            height: 100px;
+            margin-top: 20px;
+        }
+
+        > .carousel > .logos-container {
+            height: 60px;
+        }
+
+        > .carousel > .logos-container > .images-container {
+            left: ${({carouselPage}) => {
+                switch (carouselPage) {
+                    case 1:
+                        return '0';
+                    case 2:
+                        return '-240px';
+                    case 3:
+                        return '-480px';
+                    case 4:
+                        return '-720px';
+                    default:
+                        return '0';
+                }
+            }}
+        }
+
+        > .carousel > .logos-container > .images-container > figure {
+            width: 60px;
+            margin: 0 10px;
+        }
+
+        > .carousel > .buttons-container > button {
+            width: 10px;
+            height: 10px;
+            border-style: none;
+        }
     }
 `;

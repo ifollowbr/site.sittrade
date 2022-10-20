@@ -29,4 +29,8 @@ export const HeaderContainer = styled.div`
     > .menu-container > img {
         height: 50%;
     }
+
+    @media screen and (max-width: 768px) {
+        height: 30px;
+    }
 `;

@@ -39,6 +39,11 @@ export const HeaderContainer = styled.div`
     > .menu-container > img {
         height: 50%;
     }
+
+    
+    @media screen and (max-width: 768px) {
+        height: 30px;
+    }
 `;
 
 export const BodyContainer = styled.div`
@@ -119,5 +124,48 @@ export const BodyContainer = styled.div`
     > nav > a:hover {
         font-weight: 400;
         border-right: 6px solid #d51b17;
+    }
+
+    
+    @media screen and (max-width: 768px) {
+        > .circulos {
+            height: 60px;
+        }
+
+        > .contato > h1 {
+            font-size: 2.5em;
+            line-height: 10px;
+        }
+
+        > .contato > h2 {
+            font-size: 2em;
+            line-height: 10px;
+        }
+
+        > .contato > p {
+            padding: 0 5px;
+            width: 140px;
+        }
+
+        > .contato > div {
+            padding: 5px;
+            column-gap: 5px;
+        }
+
+        > .contato > div > a {
+            width: 25px;
+        }
+
+        > nav > a,
+        > nav > a:link,
+        > nav > a:active,
+        > nav > a:visited {
+            font-size: 2em;
+            padding-right: 5px;
+        }
+
+        > nav > a:hover {
+            border-right: 2px solid #d51b17;
+        }
     }
 `;

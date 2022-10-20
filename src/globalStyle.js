@@ -15,6 +15,12 @@ const GlobalStyle = createGlobalStyle`
     a {
         cursor: pointer;
     }
+
+    @media screen and (max-width: 768px) {
+        * {
+            font-size: 9px;
+        }
+    }
 `
 
 export default GlobalStyle;
