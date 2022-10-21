@@ -77,4 +77,51 @@ export const CasesContainer = styled.div`
         align-items: center;
         justify-content: center;
     }
+
+    @media screen and (max-width: 768px) {
+        padding: 0px 5%;
+
+        > .fixed-container {
+            position: initial;
+            margin: 0 auto;
+            height: 100px;
+            justify-content: center;
+            column-gap: 10px;
+        }
+
+        > .fixed-container > img {
+            height: 60px;
+        }
+        
+        > .fixed-container > section {
+            row-gap: 10px;
+        }
+
+        > .fixed-container > section > h1 {
+            font-size: 2.5em;
+            line-height: 20px;
+        }
+
+        > .fixed-container > section > p {
+            font-size: 1em;
+            margin-left: 5px;
+        }
+
+        > .fixed-container > section > span {
+            margin-left: 5px;
+        }
+
+        > .images-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        > .images-container > figure {
+            height: 140px;
+        }   
+
+        > .images-container > figure > img {
+        }
+    }
 `;
