@@ -163,14 +163,14 @@ export const QuemSomosContainer = styled.div`
         justify-content: center;
         column-gap: 15%;
         margin: 80px 10% 0;
-        padding: 40px;
+        padding: 80px 40px;
     }
 
     > .description-container > img {
         height: 200px;
     }
 
-    > .description-container > h2 {
+    > .description-container > h1 {
         font-size: 6em;
         font-weight: 300;
         font-style: italic;
@@ -180,7 +180,7 @@ export const QuemSomosContainer = styled.div`
         line-height: 70px;
     }
 
-    > .description-container > h2 > span{
+    > .description-container > h1 > span{
         font-size: 1em;
         color: #D4A026;
     }
@@ -244,6 +244,8 @@ export const QuemSomosContainer = styled.div`
 `;
 
 export const OqueFazemosContainer = styled.div`
+    padding: 80px 0;
+
     > .oque-fazemos-container {
         display: flex;
         align-items: center;
@@ -257,7 +259,7 @@ export const OqueFazemosContainer = styled.div`
         height: 200px;
     }
 
-    > .oque-fazemos-container > h2 {
+    > .oque-fazemos-container > h1 {
         display: flex;
         flex-direction: column;
 
@@ -268,7 +270,7 @@ export const OqueFazemosContainer = styled.div`
         color: #000;
     }
 
-    > .oque-fazemos-container > h2 > span {
+    > .oque-fazemos-container > h1 > span {
         color: #D51B17;
         font-size: 1em;
     }
@@ -297,7 +299,7 @@ export const OqueFazemosContainer = styled.div`
         row-gap: 10px;
     }
 
-    > .itens-container > .item > h3 {
+    > .itens-container > .item > h2 {
         font-size: 2em;
         font-weight: 500;
         font-style: italic;
@@ -357,19 +359,19 @@ export const OqueFazemosContainer = styled.div`
         height: min-content;
     }
 
-    > .map-container > section > h2 {
+    > .map-container > section > h1 {
         font-size: 2.5em;
         font-weight: 300;
         margin-bottom: 10px;
     }
 
-    > .map-container > section > h2 > strong {
+    > .map-container > section > h1 > strong {
         font-size: 1em;
         font-weight: 300;
         color: #D51B17;
     }
 
-    > .map-container > section > h2 > strong > span{
+    > .map-container > section > h1 > strong > span{
         font-size: 1em;
         font-weight: 300;
         color: #EFBF2D;
@@ -385,7 +387,7 @@ export const OqueFazemosContainer = styled.div`
             height: 60px;
         }
 
-        > .oque-fazemos-container > h2 {
+        > .oque-fazemos-container > h1 {
             font-size: 3em;
             line-height: 18px;
         }
@@ -396,7 +398,7 @@ export const OqueFazemosContainer = styled.div`
             max-width: 350px;
         }
 
-        > .itens-container > .item > h3 {
+        > .itens-container > .item > h2 {
             font-size: 1em;
         }
 
@@ -419,7 +421,7 @@ export const OqueFazemosContainer = styled.div`
             left: 5%;
         }
 
-        > .map-container > section > h2 {
+        > .map-container > section > h1 {
             font-size: 1.5em;
         }
     }

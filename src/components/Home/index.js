@@ -148,10 +148,10 @@ const Home = () => {
             <QuemSomosContainer id='quem-somos'>
                 <div className='description-container'>
                     <img src={TrioCirculoFundoBranco} alt='círculos'/>
-                    <h2>
+                    <h1>
                         Quem
                         <span>somos?</span>
-                    </h2>
+                    </h1>
                     <p>
                         Temos em nosso DNA a <strong>experiência de mais de 20 anos na produção de materiais promocionais.</strong> Desta forma, 
                         montamos uma equipe multidisciplinar e oferecemos um trabalho diferenciado no gerenciamento de criação, 
@@ -180,10 +180,10 @@ const Home = () => {
             <OqueFazemosContainer id='oque-fazemos'>
                 <div className='oque-fazemos-container'>
                     <img src={TrioCirculoFundoBranco} alt='círculos'/>
-                    <h2>
+                    <h1>
                         O que
                         <span>fazemos</span>
-                    </h2>
+                    </h1>
                     <p>
                         O nosso principal objetivo é <strong>agregar valor às marcas</strong> que atendemos, 
                         com muita competitividade, confiabilidade, transparência e custos adequados.
@@ -191,7 +191,7 @@ const Home = () => {
                 </div>
                 <div className='itens-container'>
                     <div className='item'>
-                        <h3>Criação e Planejamento</h3>
+                        <h2>Criação e Planejamento</h2>
                         <div>
                             <img src={IconeCriacaoPlanejamento} alt='criação'/>
                             <p>
@@ -201,7 +201,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='item'>
-                        <h3>Produção</h3>
+                        <h2>Produção</h2>
                         <div>
                             <img src={IconeProducao} alt='produção'/>
                             <p>
@@ -212,7 +212,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='item'>
-                        <h3>Logística</h3>
+                        <h2>Logística</h2>
                         <div>
                             <img src={IconeLogistica} alt='logística'/>
                             <p>
@@ -222,7 +222,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='item'>
-                        <h3>Gestão e acompanhamento</h3>
+                        <h2>Gestão e acompanhamento</h2>
                         <div>
                             <img src={IconeGestaoAcompanhamento} alt='gestão'/>
                             <p>
@@ -237,9 +237,9 @@ const Home = () => {
                         <img src={Mapa} alt='mapa'/>
                     </figure>
                     <section>
-                        <h2>
+                        <h1>
                             Atendemos todo o Brasil com <strong>agilidade <span>&</span> qualidade</strong>
-                        </h2>
+                        </h1>
                         <p>
                             Além da nossa estrutura própria em São Paulo, possuímos bases e parceiros nas principais capitais do país, 
                             garantindo uma grande capilaridade de produção e redução nos custos de distribuição de materiais. 

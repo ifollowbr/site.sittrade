@@ -5,7 +5,12 @@
     {
       "src": "logo-sit.svg",
       "sizes": "117x95",
-      "type": "image/x-icon"
+      "type": "image/svg"
+    },
+    {
+      "src": "logo-sit512x414.png",
+      "sizes": "512x414",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
