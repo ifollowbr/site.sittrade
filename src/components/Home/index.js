@@ -40,10 +40,10 @@ import LogoSwift from '../../assets/logo-swift.webp';
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [carouselPage, setCarouselPage] = useState(1);
-    // const [timeOutId, setTimeOutId] = useState('');
+    const [timeOutId, setTimeOutId] = useState('');
 
     useEffect(() => {
-        setTimeout(() => {
+        const imagesTimeOut = setTimeout(() => {
                 switch (carouselPage) {
                     case 1:
                         return setCarouselPage(2);
@@ -57,7 +57,7 @@ const Home = () => {
                         return
                 }
         }, 3500);
-        // setTimeOutId(imagesTimeOut);
+        setTimeOutId(imagesTimeOut);
     },[carouselPage]);
 
     useEffect(() => {
@@ -338,35 +338,35 @@ const Home = () => {
                     <div className='buttons-container'>
                         <button 
                             style={{backgroundColor: carouselPage === 1 ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
-                            // disabled={imagesPosition === '-20px'}
-                            // onClick={() => {
-                            //     clearTimeout(timeOutId);
-                            //     setImagesPosition('-20px');
-                            // }}
+                            disabled={carouselPage === 1}
+                            onClick={() => {
+                                clearTimeout(timeOutId);
+                                setCarouselPage(1);
+                            }}
                         ></button>
                         <button 
                             style={{backgroundColor: carouselPage === 2 ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
-                            // disabled={imagesPosition === '-500px'}
-                            // onClick={() => {
-                            //     clearTimeout(timeOutId);
-                            //     setImagesPosition('-500px');
-                            // }}
+                            disabled={carouselPage === 2}
+                            onClick={() => {
+                                clearTimeout(timeOutId);
+                                setCarouselPage(2);
+                            }}
                         ></button>
                         <button 
                             style={{backgroundColor: carouselPage === 3 ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
-                            // disabled={imagesPosition === '-980px'}
-                            // onClick={() => {
-                            //     clearTimeout(timeOutId);
-                            //     setImagesPosition('-980px');
-                            // }}
+                            disabled={carouselPage === 3}
+                            onClick={() => {
+                                clearTimeout(timeOutId);
+                                setCarouselPage(3);
+                            }}
                         ></button>
                         <button 
                             style={{backgroundColor: carouselPage === 4 ? '#fff' : 'rgba(255, 255, 255, 0.52)'}} 
-                            // disabled={imagesPosition === '-1460px'}
-                            // onClick={() => {
-                            //     clearTimeout(timeOutId);
-                            //     setImagesPosition('-1460px');
-                            // }}
+                            disabled={carouselPage === 4}
+                            onClick={() => {
+                                clearTimeout(timeOutId);
+                                setCarouselPage(4);
+                            }}
                         ></button>
                     </div>
                 </div>
